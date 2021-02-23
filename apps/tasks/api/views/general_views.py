@@ -3,4 +3,3 @@ from apps.tasks.api.serializers.general_serializers import CategoryTaskSerialize
 
 class CategoryTaskListAPIView(GeneralListApiView):
     serializer_class = CategoryTaskSerializers
-

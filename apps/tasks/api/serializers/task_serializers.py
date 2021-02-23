@@ -1,11 +1,11 @@
-from app.tasks.models import Task
 from rest_framework import serializers
-from apps.products.api.serializers.general_serializers import MeasureUnitSerializer,CategoryProductSerializer
 
-class ProductSerializer(serializers.ModelSerializer):
+from apps.tasks.models import Tasks
+from apps.tasks.api.serializers.general_serializers import CategoryTaskSerializers
+
+class TaskSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Product
-        exclud = ('state','created_date','modified_date','deleted_date')
-       
+        model = Tasks
+        exclude = ('state','created_date','modified_date','deleted_date')
 
