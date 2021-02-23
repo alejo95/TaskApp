@@ -58,4 +58,4 @@ class Tasks(BaseModel):
 
     def __str__(self):
         """Unicode representation of Product."""
-        return self.name
+        return self.title
