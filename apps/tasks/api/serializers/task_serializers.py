@@ -2,8 +2,11 @@ from rest_framework import serializers
 
 from apps.tasks.models import Tasks
 from apps.tasks.api.serializers.general_serializers import CategoryTaskSerializers
+from apps.users.models import User
 
 class TaskSerializer(serializers.ModelSerializer):
+    category_task = serializers.StringRelatedField()
+    user = serializers.StringRelatedField()
 
     class Meta:
         model = Tasks
