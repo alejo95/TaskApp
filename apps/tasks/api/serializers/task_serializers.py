@@ -6,7 +6,7 @@ from apps.users.models import User
 
 class TaskSerializer(serializers.ModelSerializer):
     category_task = serializers.StringRelatedField()
-    user = serializers.StringRelatedField()
+    user_task = serializers.StringRelatedField()
 
     class Meta:
         model = Tasks
