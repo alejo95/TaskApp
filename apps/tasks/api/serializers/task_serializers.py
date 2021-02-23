@@ -12,3 +12,4 @@ class TaskSerializer(serializers.ModelSerializer):
         model = Tasks
         exclude = ('state','created_date','modified_date','deleted_date')
 
+

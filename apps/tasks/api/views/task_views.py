@@ -24,10 +24,24 @@ class TaskRetrieveAPIView(generics.RetrieveAPIView):
 
     def get_queryset(self):
         return self.get_serializer().Meta.model.objects.filter(state = True)
+ 
 
 
+class TaskDestroyAPIView(generics.DestroyAPIView):
+    serializer_class = TaskSerializer
 
 
+    def get_queryset(self):
+        return self.get_serializer().Meta.model.objects.filter(state = True)
+    
+    def delete(self, request,pk = None):
+        task = self.get_queryset().filter(id = pk).first()
+        if task:
+            task.state = False
+            task.save()
+            return Response({'message:': 'Tarea eliminada correctamente'}, status = status.HTTP_200_OK)
+        return Response({'error:': 'No existe tarea con esos datos'}, status = status.HTTP_400_BAD_REQUEST)
+ 
 
 
 
