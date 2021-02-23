@@ -19,7 +19,13 @@ class TaskCreateAPIView(generics.CreateAPIView):
         return Response(serializer.errors, status = status.HTTP_400_BAD_REQUEST)
 
 
-  
+class TaskRetrieveAPIView(generics.RetrieveAPIView):
+    serializer_class = TaskSerializer
+
+    def get_queryset(self):
+        return self.get_serializer().Meta.model.objects.filter(state = True)
+
+
 
 
 
