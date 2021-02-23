@@ -43,12 +43,29 @@ class TaskDestroyAPIView(generics.DestroyAPIView):
         return Response({'error:': 'No existe tarea con esos datos'}, status = status.HTTP_400_BAD_REQUEST)
  
 
+class taskUpdateAPIView(generics.UpdateAPIView):
+    serializer_class = TaskSerializer
+
+    def get_queryset(self,pk):
+         return self.get_serializer().Meta.model.objects.filter(state = True).filter(id = pk).first()
+
+    def patch(self, request, pk= None):
+        task = self.get_queryset(pk)
+        if task:
+            task_serializer = self.serializer_class(self.get_queryset(pk))
+            return Response(task_serializer.data,status = status.HTTP_200_OK)
+        return Response({'error:': 'No existe tarea con esos datos'}, status = status.HTTP_400_BAD_REQUEST)
+
+    def put(self,request,pk=None):
+        if self.get_queryset(pk):
+            Task_serializer = self.serializer_class(self.get_queryset(pk), data=request.data)
+            if Task_serializer.is_valid():
+                Task_serializer.save()
+                return Response(Task_serializer.data,status = status.HTTP_200_OK)
+            return Response(Task_serializer.error,status = status.HTTP_400_BAD_REQUEST)
 
 
-
-
-
-
+ 
 
 
 
