@@ -1,5 +1,6 @@
 from django.db import models
 from simple_history.models import HistoricalRecords
+from apps.users.models import User
 
 from apps.base.models import BaseModel
 # Create your models here.
@@ -31,13 +32,14 @@ class CategoryTask(BaseModel):
 
 
 class Tasks(BaseModel):
-    """Model definition for Product."""
+    """Model definition for Task"""
 
     # TODO: Define fields here
     title = models.CharField('Nombre de la tarea', max_length=150, unique = True,blank = False,null = False)
     description = models.TextField('Descripción de la tarea',blank = False,null = False)
     completed = models.BooleanField(default=False, blank=True, null=True)
     category_task = models.ForeignKey(CategoryTask, on_delete=models.CASCADE,verbose_name = 'Categoria de la tarea', null = True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name = 'usuarios', null = False)
     historical = HistoricalRecords()
 
     @property
