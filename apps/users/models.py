@@ -28,6 +28,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(max_length = 255, unique = True)
     email = models.EmailField('Correo Electrónico',max_length = 255, unique = True,)
     name = models.CharField('Nombres', max_length = 255, blank = True, null = True)
+    last_name = models.CharField('Apellidos', max_length = 255, blank = True, null = True)
     is_staff = models.BooleanField(default = False)
     historical = HistoricalRecords()
     objects = UserManager()
