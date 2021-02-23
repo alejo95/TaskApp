@@ -51,8 +51,8 @@ class Tasks(BaseModel):
     class Meta:
         """Meta definition for Product."""
 
-        verbose_name = 'Producto'
-        verbose_name_plural = 'Productos'
+        verbose_name = 'tareas'
+        verbose_name_plural = 'Tareas'
 
     def __str__(self):
         """Unicode representation of Product."""

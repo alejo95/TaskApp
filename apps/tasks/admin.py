@@ -1,3 +1,6 @@
 from django.contrib import admin
+from apps.tasks.models import *
 
-# Register your models here.
+
+admin.site.register(CategoryTask)
+admin.site.register(Tasks)
