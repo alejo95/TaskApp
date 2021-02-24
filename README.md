@@ -1,4 +1,4 @@
-# TaskApp
+# API_TaskApp
 
 Rest Api de creación de tareas, desarrollada en Django Rest Framework  bajo el patron MVT en este projecto se encuentra una REST API la cual se conecta a una base de datos Sqli3 ( Base De datos relacional )
 
@@ -48,20 +48,18 @@ Estas pruebas se podran ver con sus respectivos ejemplos en la url siguiente
 
 [Django](https://web.postman.co/workspace/My-Workspace~ac55a5b7-a91a-4b88-8627-e5ed30813c1e/documentation/7262894-01cc7241-ff01-46eb-b5d9-dc05e29591f9) - PostMan web 
 
-### Analice las pruebas end-to-end 🔩
+### Ejecucion test Unitarios 🔩
 
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-### Y las pruebas de estilo de codificación ⌨️
-
-_Explica que verifican estas pruebas y por qué_
+_Para ejecutar los test unitarios tenemos que ejecutar principalmente el servido con el comandpo
 
 ```
-Da un ejemplo
+$ python manage.py runserver
+```
+
+_Una vez ejecutado el servidor ejecutamos, procedemos a ejecutar los test unitarios con el comando
+
+```
+$ python manage.py test apps
 ```
 
 
