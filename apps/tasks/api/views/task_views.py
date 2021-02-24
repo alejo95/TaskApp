@@ -1,6 +1,7 @@
 from rest_framework import generics, status
 from rest_framework.response import Response
 
+
 from apps.base.api import GeneralListApiView
 from apps.tasks.api.serializers.task_serializers import TaskSerializer
 
