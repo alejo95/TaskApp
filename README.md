@@ -46,7 +46,7 @@ Durante el proceso de creación se utilizaron dos tipos de prubas, unas manuales
 
 Estas pruebas se podran ver con sus respectivos ejemplos en la url siguiente
 
-[Django](https://web.postman.co/workspace/My-Workspace~ac55a5b7-a91a-4b88-8627-e5ed30813c1e/documentation/7262894-01cc7241-ff01-46eb-b5d9-dc05e29591f9) - PostMan web 
+[Postman](https://web.postman.co/workspace/My-Workspace~ac55a5b7-a91a-4b88-8627-e5ed30813c1e/documentation/7262894-01cc7241-ff01-46eb-b5d9-dc05e29591f9) - PostMan web 
 
 ### Ejecucion test Unitarios 🔩
 
