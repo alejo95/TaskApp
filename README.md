@@ -95,7 +95,7 @@ Se generaron 3 componentes (apps) las cuales están compuestas por lo siguiente:
 
 Para el proceso de creación de tareas se utilizó la metodología Kanban con el fin de listar las diferentes tareas a realizar para lograr el producto final 
 
-Gi
+![img](https://cdn.discordapp.com/attachments/804077015916347402/813867237927813120/Screen_Shot_2021-02-23_at_3.17.41_PM.png)
 
 ---
 
